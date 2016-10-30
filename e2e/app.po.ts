@@ -16,4 +16,12 @@ export class HeroesWebpackTddPage {
   getNameInput() {
     return element(by.css('app-root input')).getAttribute('value');
   }
+
+  getListOfHeroes() {
+    return element(by.css('app-root ul li'));
+  }
+
+  getHeroFromFeroeso() {
+    return element.all(by.css('app-root ul li')).get(2);
+  }
 }
