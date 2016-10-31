@@ -8,17 +8,17 @@ describe('heroes-webpack-tdd App', function() {
     page = new HeroesWebpackTddPage();
   });
 
-  it('should display message saying Tour of Heroes', () => {
+  it('should display message saying "Tour of Heroes"', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Tour of Heroes');
   });
 
-  it('should display message saying Windstorm details!', () => {
+  it('should display message saying "My Heroes"', () => {
     page.navigateTo();
-    expect(page.getParagraphSubtitle()).toEqual('Mr. Nice details!');
+    expect(page.getParagraphSubtitle()).toEqual('My Heroes!');
   });
 
-  it('default name should be Windstorm', () => {
+  it('default name should be "Mr. Nice"', () => {
     page.navigateTo();
     expect(page.getNameInput()).toEqual('Mr. Nice');
   });
@@ -31,7 +31,7 @@ describe('heroes-webpack-tdd App', function() {
   it('select hero from list', () => {
     page.navigateTo();
     browser.debugger();
-    let li = page.getHeroFromFeroes(); 
+    let li = page.getHeroFromHeroes(); 
     li.click().then(function(){
       expect(li.getAttribute('class')).toEqual('selected');
      })   

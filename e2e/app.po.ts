@@ -21,7 +21,7 @@ export class HeroesWebpackTddPage {
     return element(by.css('app-root ul li'));
   }
 
-  getHeroFromFeroeso() {
+  getHeroFromHeroes() {
     return element.all(by.css('app-root ul li')).get(2);
   }
 }
